@@ -1,18 +1,11 @@
 package com.mycompany.vo;
 
 public class Book {
-  int id;
   String title;
   String author;
   String image;
   
-//alt + shift + s > r ´ÜÃàÅ°¸¦ ÀÌ¿ëÇÏ¿© ºü¸£°Ô getter, setter¸¦ »ý¼ºÇÒ ¼ö ÀÖ´Ù
-  public int getId() {
-    return id;
-  }
-  public void setId(int id) {
-    this.id = id;
-  }
+//alt + shift + s > r ï¿½ï¿½ï¿½ï¿½Å°ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ getter, setterï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½
   public String getTitle() {
     return title;
   }
@@ -31,9 +24,9 @@ public class Book {
   public void setImage(String image) {
     this.image = image;
   }
-//alt + shift + s > s ´ÜÃàÅ°¸¦ ÀÌ¿ëÇÏ¿© ºü¸£°Ô toString() ¿À¹ö¶óÀÌµå¸¦ ÇÒ ¼ö ÀÖ´Ù.
+//alt + shift + s > s ï¿½ï¿½ï¿½ï¿½Å°ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ toString() ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµå¸¦ ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½.
   @Override
   public String toString() {
-    return "Book [id=" + id + ", title=" + title + ", author=" + author + ", image=" + image + "]";
+    return "Book [ title=" + title + ", author=" + author + ", image=" + image + "]";
   }
 }
