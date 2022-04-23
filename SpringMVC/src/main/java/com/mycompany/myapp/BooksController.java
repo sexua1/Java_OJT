@@ -1,7 +1,10 @@
 package com.mycompany.myapp;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,7 +18,10 @@ public class BooksController {
   private BookMapper bookMapper;
 
   @RequestMapping(value = "/books", method = RequestMethod.GET)
-  public String index() {
+  public String index(Model model) {
+    List<Book> books = bookMapper.getList();
+    
+    model.addAttribute("books", books);
     return "books/index";
   }
 
@@ -23,10 +29,9 @@ public class BooksController {
   public String newBook() {
     return "books/new";
   }
-  
+
   @RequestMapping(value = "/bookSave", method = RequestMethod.POST)
   public String create(@ModelAttribute Book book) {
-    System.out.println(book.toString());
     bookMapper.create(book);
     return "redirect:/books";
   }
